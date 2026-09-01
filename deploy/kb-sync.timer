@@ -1,0 +1,13 @@
+[Unit]
+Description=Check the NHMesh knowledge base for merged changes
+Documentation=https://github.com/NHMesh/nhmesh-kb
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+# Keeps every host in a future fleet from fetching on the same second.
+RandomizedDelaySec=60
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,32 @@
+name: A guide is out of date
+description: Something in a guide used to be true and isn't any more
+title: "[outdated] "
+labels: [outdated]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You do not need to know the fix. "This section is wrong now" is a
+        complete and useful report — someone else can take it from there.
+  - type: input
+    id: guide
+    attributes:
+      label: Which guide
+      description: The page name or its URL on nhmesh.live
+      placeholder: meshtastic-setup
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What's out of date
+      description: Quote the part that's wrong if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What's true now (if you know)
+      description: Firmware version, app release, changed menu name, link to release notes — whatever you have.
+    validations:
+      required: false

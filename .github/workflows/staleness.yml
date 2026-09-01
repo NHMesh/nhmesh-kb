@@ -1,0 +1,82 @@
+name: Staleness sweep
+
+# The knowledge base does not rot because anyone decided to let it. It rots
+# because nothing ever asks. This does the asking, monthly, in public.
+on:
+  schedule:
+    - cron: "0 14 1 * *" # 1st of the month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Find guides nobody has reviewed lately
+        id: stale
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import datetime, os, pathlib, re
+
+          threshold = 180
+          today = datetime.date.today()
+          rows = []
+          for path in sorted(pathlib.Path("guides").glob("*.md")):
+              text = path.read_text()
+              m = re.search(r"^last_reviewed: (\d{4}-\d{2}-\d{2})$", text, re.M)
+              if not m:
+                  continue
+              reviewed = datetime.date.fromisoformat(m.group(1))
+              age = (today - reviewed).days
+              if age > threshold:
+                  rows.append((age, path.stem, m.group(1)))
+
+          rows.sort(reverse=True)
+          print(f"count={len(rows)}")
+          print("body<<EOF")
+          if rows:
+              print(f"These {len(rows)} guides have not been reviewed in over {threshold} days.")
+              print()
+              print("Reviewing one is small: read it, check it still matches reality, and")
+              print("open a PR. If it is still accurate, just bump `last_reviewed` — that is")
+              print("a valid and useful contribution.")
+              print()
+              print("| Guide | Last reviewed | Days |")
+              print("|---|---|---|")
+              for age, slug, reviewed in rows:
+                  print(f"| [`{slug}`](guides/{slug}.md) | {reviewed} | {age} |")
+          print("EOF")
+          PY
+
+      - name: Open or update the tracking issue
+        if: steps.stale.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BODY: ${{ steps.stale.outputs.body }}
+          TITLE: "Guides due for review"
+        run: |
+          existing=$(gh issue list --state open --label stale-review \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue edit "$existing" --body "$BODY"
+            echo "updated issue #$existing"
+          else
+            gh issue create --title "$TITLE" --label stale-review --body "$BODY"
+          fi
+
+      - name: Close the tracking issue when nothing is stale
+        if: steps.stale.outputs.count == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --state open --label stale-review \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "Every guide has been reviewed within the last 180 days."
+          fi

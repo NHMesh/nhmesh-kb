@@ -1,0 +1,30 @@
+name: Something isn't covered
+description: You looked for an answer in the KB and it wasn't there
+title: "[gap] "
+labels: [gap]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions that get asked in Discord over and over are exactly the ones
+        that belong here. If you had to ask, someone else did too.
+  - type: textarea
+    id: question
+    attributes:
+      label: What were you trying to find out
+      placeholder: How do I get my node to show up on the map after switching to MediumFast?
+    validations:
+      required: true
+  - type: textarea
+    id: answer
+    attributes:
+      label: Did you find the answer elsewhere?
+      description: Discord thread, another wiki, trial and error — anything that saves the writer from starting cold.
+    validations:
+      required: false
+  - type: checkboxes
+    id: willing
+    attributes:
+      label: Optional
+      options:
+        - label: I'd be willing to write a first draft of this myself

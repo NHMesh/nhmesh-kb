@@ -1,0 +1,50 @@
+name: Validate
+
+# `pull_request`, never `pull_request_target`. The latter would run with this
+# repository's write token in scope while checking out a contributor's branch,
+# which is the standard way public repositories get compromised through a fork.
+# This workflow sees no secrets and can write nothing.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Pinned to a commit: a tag can be moved, a commit cannot.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Validate guides
+        run: python3 tools/kb.py validate
+
+      - name: Test the validator itself
+        run: python3 tools/test_kb.py
+
+      - name: Build the publishable payload
+        run: python3 tools/kb.py build dist
+
+      # The web host runs the same two commands before publishing anything, so a
+      # green check here is a courtesy to the contributor, not the gate.
+      - name: Confirm the index is well formed
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          index = json.loads(pathlib.Path("dist/guides/index.json").read_text())
+          ids = [g["id"] for s in index["sections"] for g in s["guides"]]
+          assert len(ids) == len(set(ids)), "duplicate guide ids in the generated index"
+          for gid in ids:
+              assert pathlib.Path(f"dist/guides/{gid}.md").is_file(), f"{gid} missing from build"
+          print(f"index lists {len(ids)} guides, all present")
+          PY

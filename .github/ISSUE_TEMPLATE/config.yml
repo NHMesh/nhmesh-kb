@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: NHMesh Discord
+    url: https://nhmesh.live/?section=matrix-and-community
+    about: Questions, troubleshooting, and general mesh chat. Faster than an issue.
+  - name: Report a security problem
+    url: https://github.com/NHMesh/nhmesh-kb/security/advisories/new
+    about: Please do not open a public issue for security reports.

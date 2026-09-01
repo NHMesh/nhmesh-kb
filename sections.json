@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start Here"
+    },
+    {
+      "id": "setup",
+      "title": "Setup Guides"
+    },
+    {
+      "id": "infrastructure",
+      "title": "Infrastructure & Builds"
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting"
+    },
+    {
+      "id": "operating",
+      "title": "Operating the Mesh"
+    },
+    {
+      "id": "reference",
+      "title": "Reference"
+    }
+  ]
+}

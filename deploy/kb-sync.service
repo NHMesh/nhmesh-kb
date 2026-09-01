@@ -1,0 +1,31 @@
+[Unit]
+Description=Publish NHMesh knowledge base content to nhmesh.live
+Documentation=https://github.com/NHMesh/nhmesh-kb
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=nhmesh
+ExecStart=/opt/nhmesh-kb/kb-sync.sh
+
+# The script fetches untrusted content. Give it nothing it does not need.
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+
+# The only two paths it may write to.
+ReadWritePaths=/srv/nhmesh-kb/guides /var/lib/nhmesh-kb
+
+TimeoutStartSec=300

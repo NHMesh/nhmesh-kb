@@ -1,0 +1,23 @@
+# Who has to approve what.
+#
+# GitHub silently ignores owners it cannot resolve — a misspelled team or a team
+# that does not exist yet yields a CODEOWNERS file that looks strict and enforces
+# nothing. Every entry below is a real account today.
+
+# Default owner for everything, including guide content.
+*                   @grleblanc
+
+# The security boundary: these decide what content is allowed to exist and how it
+# reaches nhmesh.live. Keep them owner-reviewed even after content review is
+# delegated to others.
+/tools/             @grleblanc
+/deploy/            @grleblanc
+/.github/           @grleblanc
+/sections.json      @grleblanc
+/LICENSE            @grleblanc
+/SECURITY.md        @grleblanc
+
+# To stop being the only reviewer: create an @NHMesh/kb-maintainers team, add
+# trusted contributors, and change the `*` line above to point at it. Leave the
+# specific paths on @grleblanc. Adding the team here before it exists would
+# quietly disable ownership review entirely.
