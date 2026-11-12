@@ -3,7 +3,7 @@ id: resources
 title: Tools & External Resources
 section: reference
 order: 2
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Tools & External Resources
@@ -26,7 +26,7 @@ Curated links for people building things with or around the mesh. This page is i
 - **[Firmware releases](https://github.com/meshtastic/firmware/releases)** — GitHub release page
 - **[MQTT docs](https://meshtastic.org/docs/configuration/module/mqtt/)** — official MQTT integration spec
 - **[Meshtastic Flasher](https://flasher.meshtastic.org)** — web-based firmware flasher
-- **[Meshtastic Discord](https://meshtastic.org/discord)** — upstream community
+- **[Meshtastic Discord](https://discord.gg/meshtastic)** — upstream community
 
 ---
 
@@ -58,7 +58,7 @@ Curated links for people building things with or around the mesh. This page is i
 For when you want to go deeper into the radio side:
 
 - **[ARRL Antenna Book](https://www.arrl.org/arrl-antenna-book)** — the standard reference for amateur RF work. Applies directly to LoRa antenna design
-- **[Fresnel Zone Calculator](https://www.qsl.net/n1bwt/fresnel.html)** — plan line-of-sight paths with vegetation / terrain clearance
+- **[Fresnel Zone Calculator](https://www.afar.net/fresnel-zone-calculator/)** — plan line-of-sight paths with vegetation / terrain clearance
 - **[LMR coax loss calculator](https://timesmicrowave.com/calculator/)** — Times Microwave's official LMR-series loss calculator
 
 ---

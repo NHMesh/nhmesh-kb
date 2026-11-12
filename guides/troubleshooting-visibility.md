@@ -3,7 +3,7 @@ id: troubleshooting-visibility
 title: My Node Isn't on the Map
 section: troubleshooting
 order: 1
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Troubleshooting: My Node Isn't on the Map
@@ -110,7 +110,7 @@ This is a different problem from visibility. Your node is reaching a gateway. Yo
 
 **Check:**
 
-- **Which channel are you messaging on?** We monitor `#nhmesh`, `#nhhc`, and the MeshCore public channel. DMs are private and won't appear.
+- **Which channel are you messaging on?** We monitor `#nhmesh`, `#nh-hc`, and the MeshCore public channel. DMs are private and won't appear.
 - **MQTT configuration:** if you are relying on MQTT to relay rather than radio, see **[MQTT Troubleshooting](?section=troubleshooting-mqtt)**.
 
 ---

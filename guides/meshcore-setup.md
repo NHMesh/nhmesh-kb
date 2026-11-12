@@ -71,7 +71,7 @@ If the flasher can't find your device:
 1. Install the MeshCore app on your phone (iOS App Store or Google Play).
 2. Pair with your node via Bluetooth. Default PIN is `123456`.
 3. In the app, open your node's settings:
-   - **Region**: `US Recommended`
+   - **Radio preset**: `US Recommended` (`910.525,62.5,7,5`). Firmware ships with a European default, so set this even on a US-variant flash
    - **Name**: something short (16 chars max)
    - **Location**: enter lat/lon, or enable Advert Location Source if you have GPS
    - **Advert Location Source**: on
@@ -135,7 +135,7 @@ If you want your node's packets to appear on our map and contribute to the gatew
 
 | Setting | Default | What it does |
 |---|---|---|
-| Region | Varies by flash | Sets LoRa parameters for regulatory compliance |
+| Radio preset | Firmware default is European (`869.618,62.5,8,5`); set `US Recommended` | Sets LoRa parameters for your region. This is the radio preset, separate from the repeater routing regions in **[MeshCore Repeaters & Regions in NH](?section=meshcore-repeaters-regions)** |
 | TX Power | ~22 dBm | Output strength. Don't go above regional max |
 | Coding Rate | 5 | LoRa error correction. Higher = more reliable but slower |
 | Bandwidth | 62.5 kHz | Channel width. NHMesh standard |
@@ -150,6 +150,7 @@ The NHMesh community standard radio config is `910.525,62.5,7,5` (freq, bw, sf, 
 
 - **[Your First Node](?section=first-node)** — simpler quickstart version of this guide
 - **[Hardware Picker](?section=hardware-picker)** — what to buy
-- **[MeshCore Hashtag Channels](?section=meshcore-hashtag-channels)** — stewardship and the `#nhmesh` / `#nhhc` channels
+- **[MeshCore Hashtag Channels](?section=meshcore-hashtag-channels)** — stewardship and the `#nhmesh` / `#nh-hc` channels
+- **[MeshCore Repeaters & Regions in NH](?section=meshcore-repeaters-regions)** — repeater settings, adverts, regions
 - **[Observer / Gateway Setup](?section=letsmesh-observer)** — next step if you want to contribute to the map data
 - **[Troubleshooting: Visibility](?section=troubleshooting-visibility)** — if things don't work

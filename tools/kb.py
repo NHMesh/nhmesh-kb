@@ -329,6 +329,7 @@ def build_index(sections, guides):
                     "id": g["meta"]["id"],
                     "title": g["meta"]["title"],
                     "file": f"/guides/{g['meta']['id']}.md",
+                    "last_reviewed": g["meta"]["last_reviewed"],
                 }
                 for g in members
             ],
