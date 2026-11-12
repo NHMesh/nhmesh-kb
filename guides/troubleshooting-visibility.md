@@ -111,7 +111,6 @@ This is a different problem from visibility. Your node is reaching a gateway. Yo
 **Check:**
 
 - **Which channel are you messaging on?** We monitor `#nhmesh`, `#nhhc`, and the MeshCore public channel. DMs are private and won't appear.
-- **Are you on the right primary channel?** As of 2026, Meshtastic users should have `NHMesh` as Channel 0 (primary). See **[Switching to Medium Fast](?section=switching-to-medium-fast)**.
 - **MQTT configuration:** if you are relying on MQTT to relay rather than radio, see **[MQTT Troubleshooting](?section=troubleshooting-mqtt)**.
 
 ---

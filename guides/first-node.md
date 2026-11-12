@@ -3,12 +3,12 @@ id: first-node
 title: Your First Node
 section: start-here
 order: 4
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Your First Node
 
-This guide walks you from "I just received a Heltec V4 in the mail" to "I sent my first mesh message." It assumes MeshCore because that is what we recommend for new nodes. If you chose Meshtastic, see **[Meshtastic Node Setup](?section=meshtastic-setup)** instead.
+This guide walks you from "I just received a Heltec V4 in the mail" to "I sent my first mesh message." It assumes MeshCore because that is what we recommend for new nodes. If you already run Meshtastic, see **[Meshtastic Node Setup](?section=meshtastic-setup)** instead.
 
 Total time: about 30 minutes. Most of it is waiting for firmware to flash and for the device to find other nodes.
 

@@ -57,11 +57,6 @@ If none of the above fixes it, see the specific issue lists below.
 
 ## Known Meshtastic issues
 
-### Default channel (Channel 0) mismatch after MF switchover
-- **Affects:** anyone who was on LongFast before the 2026 Medium Fast transition.
-- **Symptom:** you switch to Medium Fast, but the `NHMesh` channel is still at Channel 1 instead of Channel 0.
-- **Workaround:** delete the default LongFast channel at position 0, then re-add NHMesh as Channel 0. See **[Switching to Medium Fast](?section=switching-to-medium-fast)**.
-
 ### Flood-happy mobile nodes
 - **Affects:** Companion nodes that move frequently and can't find their way back to peers.
 - **Symptom:** your node floods the mesh every time you move, consuming airtime unnecessarily.

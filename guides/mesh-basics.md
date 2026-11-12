@@ -3,7 +3,7 @@ id: mesh-basics
 title: Mesh Network Basics
 section: start-here
 order: 5
-last_reviewed: 2026-01-19
+last_reviewed: 2026-11-12
 ---
 
 # Mesh Network Basics
@@ -48,7 +48,7 @@ Measured in **dB**, this is the most important metric for LoRa. It tells you how
 - **Negative values (-5 to -20):** LoRa can actually "hear" signals below the noise floor! These are weak but often still usable for text messages.
 
 ## 5. Routing Architectures
-NHMesh supports two different ways of moving data:
+NHMesh supports two different ways of moving data. Most of the network now uses MeshCore:
 
 ### Flooding Mesh (Meshtastic)
 A "simplified" approach where every node that hears a message rebroadcasts it until the hop limit is reached.
@@ -62,4 +62,4 @@ A "smart" approach where nodes keep track of their neighbors and only send messa
 
 ---
 
-_For help setting up your specific hardware, see the **Meshtastic Setup** or **MeshCore Setup** guides._
+_For help setting up your specific hardware, start with **[MeshCore Node Setup](?section=meshcore-setup)**. Existing Meshtastic users: **[Meshtastic Node Setup](?section=meshtastic-setup)**._

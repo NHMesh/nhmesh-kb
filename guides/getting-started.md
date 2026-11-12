@@ -3,14 +3,14 @@ id: getting-started
 title: Welcome
 section: start-here
 order: 1
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Welcome to NHMesh
 
 NHMesh is an independent, community-run mesh radio network covering New Hampshire and the surrounding region. The network runs on LoRa radios — small, low-power devices that can pass short text messages across tens of miles without cellular service, internet, or a central provider. Every node anyone puts up makes the network better for everyone else.
 
-We are a dual-protocol network. Both **Meshtastic** and **MeshCore** run over the same hardware on the same frequencies, and our infrastructure (repeaters, MQTT bridges, the live map) supports both. You pick whichever protocol fits your goals; many of us run both.
+We are a dual-protocol network, and most of NHMesh now runs **MeshCore**. Both **Meshtastic** and **MeshCore** run over the same hardware on the same frequencies, and our infrastructure (repeaters, MQTT bridges, the live map) supports both. If you are new, start with MeshCore; if you already run Meshtastic, you can keep using it.
 
 This page is a short orientation. Pick the path below that matches where you are.
 
@@ -28,8 +28,8 @@ Start with these three guides in order:
 ### I have hardware and I want to get on the mesh
 Jump directly to a setup guide:
 
-- **[MeshCore Node Setup](?section=meshcore-setup)** — our recommended default for new NH-area nodes.
-- **[Meshtastic Node Setup](?section=meshtastic-setup)** — if you want the more mature app ecosystem.
+- **[MeshCore Node Setup](?section=meshcore-setup)** — where new NH-area nodes should start.
+- **[Meshtastic Node Setup](?section=meshtastic-setup)** — if you already run Meshtastic.
 
 ### Something is broken / my node isn't showing up
 Head to **Troubleshooting** (in the sidebar) for symptom-based flowcharts. The most common issue — "I'm set up but nothing is happening" — is covered in the **[Map Visibility](?section=troubleshooting-visibility)** guide.
