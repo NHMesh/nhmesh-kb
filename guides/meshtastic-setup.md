@@ -33,7 +33,7 @@ Download the Meshtastic app for your device:
 
 ## Step 4: Use the Default Channel
 1. Go to **Channels** and leave the primary channel (Channel 0) as the stock default.
-2. Confirm **Modem Preset** is `LongFast`. This is the default, so you normally change nothing.
+2. Confirm **Modem Preset** is `LongFast`. This is the default, so you normally change nothing. `MediumFast` also works and the map still collects it, but we recommend `LongFast`: it's where most Meshtastic users in NH are.
 3. Leave the **PSK** at its default value.
 
 Optional: add the **NHMesh** channel as a secondary channel. It is not required. See the **[Meshtastic Channel Setup Guide](?section=meshtastic-channel-setup)**.

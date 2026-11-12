@@ -37,7 +37,7 @@ meshtastic --ch-add NHMesh
 meshtastic --ch-index 1 --ch-set psk "NA=="
 ```
 
-Leave your modem preset on `LongFast`. Channels share the one radio preset set under Radio Configuration → LoRa.
+We recommend leaving your modem preset on `LongFast`. `MediumFast` is still supported and shows up on the map, but we don't recommend it. Channels share the one radio preset set under Radio Configuration → LoRa.
 
 ## Other Channels
 You can add private, encrypted channels in the remaining slots for your family or local group.
