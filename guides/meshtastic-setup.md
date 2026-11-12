@@ -2,13 +2,15 @@
 id: meshtastic-setup
 title: Meshtastic Node Setup
 section: setup
-order: 1
-last_reviewed: 2026-01-19
+order: 2
+last_reviewed: 2026-11-12
 ---
 
 # Meshtastic Setup Guide
 
-This guide will help you set up your Meshtastic device and join the NHMesh community network.
+Most of NHMesh now runs MeshCore. If you are new, start with **[MeshCore Node Setup](?section=meshcore-setup)** instead.
+
+This guide is for people who already run Meshtastic or want to. It sets up your device on the stock **LongFast** preset, which is the Meshtastic default.
 
 ## Step 1: Get a Device
 To join the network, you'll need a compatible LoRa device. Common choices include:
@@ -29,15 +31,12 @@ Download the Meshtastic app for your device:
 3. **Set your Region:** Go to Settings > Radio Configuration > LoRa and set Region to **US**.
 4. **Set Your Name:** Pick a unique display name and a 4-letter short name (e.g., "GraniteNode" / "GRNT").
 
-## Step 4: Join NHMesh
-To communicate with the local NH community, you must configure the **NHMesh** channel:
-1. Go to **Channels**.
-2. Tap on the primary channel (Channel 0).
-3. Set the **Name** to `NHMesh` (case-sensitive).
-4. Set the **Modem Preset** to `Medium Fast`.
-5. Set the **PSK** to `NA==`.
+## Step 4: Use the Default Channel
+1. Go to **Channels** and leave the primary channel (Channel 0) as the stock default.
+2. Confirm **Modem Preset** is `LongFast`. This is the default, so you normally change nothing.
+3. Leave the **PSK** at its default value.
 
-> **TIP:** **Scan the QR Code:** The easiest way to join is to scan the NHMesh QR code found on our website or provided by a local community member. This will configure the channel and modem settings automatically!
+Optional: add the **NHMesh** channel as a secondary channel. It is not required. See the **[Meshtastic Channel Setup Guide](?section=meshtastic-channel-setup)**.
 
 ## Step 5: Advanced Optimization
 For permanent installs, reconsider your device **Role**:
@@ -47,4 +46,4 @@ For permanent installs, reconsider your device **Role**:
 
 ---
 
-_For detailed channel configuration instructions, see the **Meshtastic Channel Setup Guide**._
+_For the optional NHMesh channel, see **[Meshtastic Channel Setup](?section=meshtastic-channel-setup)**._

@@ -9,7 +9,7 @@ that person.
   Configuration" — not "the user should open" or "we will now open."
 - **Action before theory.** Say what to do, then explain why if it helps. Someone
   mid-setup will read the first line and skip the paragraph.
-- **Concrete values.** `MediumFast`, `906.875 MHz`, `Region: US`. Not "the
+- **Concrete values.** `LongFast`, `906.875 MHz`, `Region: US`. Not "the
   appropriate preset."
 - **Plain words.** "Your node won't show up" beats "visibility will be
   impaired."

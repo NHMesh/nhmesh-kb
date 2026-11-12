@@ -3,7 +3,7 @@ id: meshtastic-vs-meshcore
 title: Meshtastic vs. MeshCore
 section: start-here
 order: 2
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Meshtastic vs. MeshCore
@@ -18,14 +18,14 @@ This guide is neutral. It is written by people who operate infrastructure for bo
 
 | If this describes you… | Start with |
 |---|---|
-| I want a polished phone app, casual text chat, and the largest ecosystem | Meshtastic |
+| I want a polished phone app, casual text chat, and the largest global ecosystem | Meshtastic (stock `LongFast`) |
 | I want messages to be delivered fast, even when the mesh is busy | MeshCore |
 | I want to learn how a mesh actually routes packets | MeshCore |
-| I want the lowest-friction out-of-box experience | Meshtastic |
+| I want to reach most NH nodes and repeaters | MeshCore |
 | I want to run a repeater or room server for my community | MeshCore |
 | I don't care, just pick for me | MeshCore |
 
-We recommend MeshCore as the default for new NH-area nodes as of 2026. It is what most of our current active repeater operators run, it uses less airtime, and it handles our current node density better. Meshtastic is still fully supported, and if you are already comfortable with it, there is no reason to switch.
+Most of NHMesh has migrated to MeshCore, and we recommend it first for new NH-area nodes as of 2026. It is what most of our active repeater operators run, it uses less airtime, and it handles our current node density better. Meshtastic is still supported on the stock `LongFast` preset, and if you are already comfortable with it, there is no reason to switch.
 
 ---
 
@@ -64,7 +64,7 @@ We are building bridges that let a Meshtastic user send a message that reaches a
 
 **If you are brand new:** start with MeshCore. Flash a Heltec V4 with the Companion firmware, pair it with the MeshCore app, and you are on the mesh in under 30 minutes. If you decide later that you want to try Meshtastic, the same hardware will run it — erase and reflash.
 
-**If you have been running Meshtastic and it works for you:** there is no requirement to switch. The NHMesh infrastructure will keep supporting Meshtastic for the foreseeable future. Take a look at MeshCore when you have a spare afternoon and want to see the difference firsthand.
+**If you have been running Meshtastic and it works for you:** there is no requirement to switch. The NHMesh infrastructure still supports Meshtastic. Take a look at MeshCore when you have a spare afternoon and want to see the difference firsthand.
 
 **If you are building backbone infrastructure (a repeater on a hill, a room server for a town):** use MeshCore. The routing and role model are a better fit for fixed infrastructure.
 

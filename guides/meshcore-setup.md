@@ -2,8 +2,8 @@
 id: meshcore-setup
 title: MeshCore Node Setup
 section: setup
-order: 2
-last_reviewed: 2026-04-21
+order: 1
+last_reviewed: 2026-11-12
 ---
 
 # MeshCore Node Setup

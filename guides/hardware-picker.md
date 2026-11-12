@@ -3,7 +3,7 @@ id: hardware-picker
 title: Hardware Picker
 section: start-here
 order: 3
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Hardware Picker
@@ -38,7 +38,7 @@ The default recommendation. Small, cheap, widely available, good enough for most
 - **Pros:** Cheap, small, ubiquitous, every guide is written with this in mind.
 - **Cons:** No built-in GPS. The built-in antenna is a compromise — you'll want to upgrade.
 - **Buy:** search "Heltec V4 LoRa 915MHz" on AliExpress or Amazon. Make sure it's the 915 MHz US band version, not 868 MHz.
-- **Firmware:** MeshCore or Meshtastic Companion.
+- **Firmware:** MeshCore Companion (recommended), or Meshtastic if you already run it.
 
 **Note:** There are ongoing hardware revisions. If you get a V4 that seems less sensitive than expected, try the CLI command `radio.rxgain on` — there is a known bug where the LNA is disabled on boot. See **[Troubleshooting Firmware](?section=troubleshooting-firmware)**.
 

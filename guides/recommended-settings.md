@@ -3,10 +3,12 @@ id: recommended-settings
 title: Recommended Settings
 section: operating
 order: 3
-last_reviewed: 2026-01-19
+last_reviewed: 2026-11-12
 ---
 
 # NHMesh Recommended Configuration Settings
+
+These settings are for **Meshtastic** nodes. Most of NHMesh now runs MeshCore; new users should start at **[MeshCore Node Setup](?section=meshcore-setup)**.
 
 To ensure a robust and reliable mesh network using NHMesh devices, we recommend the following configuration settings. These guidelines are based on best practices and community experience.
 
@@ -36,6 +38,8 @@ These settings primarily affect how your device interacts with the LoRa radio an
   - For example, fixed nodes should disable most or all position flags, as their location is static.
 
 ### LoRa Settings
+- **Modem Preset:** `LongFast`
+  - The Meshtastic stock default. Leave it unchanged.
 - **Hop Limit:** `5`
   - The maximum number of hops a message can take to reach its destination.
   - _Important:_ Do not increase this value significantly. A higher hop limit can lead to excessive network traffic.
