@@ -54,6 +54,6 @@ The live map at [nhmesh.live](/) shows everyone currently online. The **Nodes** 
 
 - **Discord** — the main place we talk. Ask in the setup/support channel; response time is usually under an hour during waking hours.
 - **Matrix** — `matrix.nhmesh.com` — bridged to the MeshCore room if you prefer Matrix over Discord.
-- **In-network** — the `#nhmesh` hashtag channel is general chat; `#nhhc` is for health-check pings.
+- **In-network** — the `#nhmesh` hashtag channel is general chat; `#nh-hc` is for health-check pings.
 
 No question is too basic. Most of us struggled with the same setup steps you're about to, and we are happy to walk through them. If you find yourself stuck on something the knowledge base doesn't cover, tell us — that's how this documentation grows.

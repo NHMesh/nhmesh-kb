@@ -3,14 +3,14 @@ id: health-check
 title: Using the Health Check
 section: troubleshooting
 order: 4
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Using the Health Check
 
 The Health Check is a lightweight tool we built to help you answer one question: **does the mesh actually reach me right now?**
 
-It sends a single ping through the `#nhhc` channel and tracks which gateways heard it. Think of it as a one-shot speed test for LoRa coverage.
+It sends a single ping through the `#nh-hc` channel and tracks which gateways heard it. Think of it as a one-shot speed test for LoRa coverage.
 
 This guide explains how to use it, when it's useful, and how to interpret the results.
 
@@ -47,8 +47,8 @@ The whole round trip takes about 10 seconds. It's designed to be cheap enough to
 ## How to run one
 
 1. Go to [nhmesh.live/health-check](/health-check).
-2. The page will prompt you to send a specific test payload from your node — typically via the `#nhhc` hashtag channel.
-3. In your MeshCore or Meshtastic app, send that payload on `#nhhc`.
+2. The page will prompt you to send a specific test payload from your node — typically via the `#nh-hc` hashtag channel.
+3. In your MeshCore or Meshtastic app, send that payload on `#nh-hc`.
 4. The page watches for the payload to appear in our packet stream and displays the results.
 
 The results panel shows:
@@ -81,11 +81,11 @@ Your node isn't in direct range of any gateway — you're being relayed through 
 
 ## Stewardship: please don't spam
 
-Health Check is on the `#nhhc` hashtag channel exactly so normal mesh traffic doesn't see the flood of test pings. But `#nhhc` still uses airtime. Guidelines:
+Health Check is on the `#nh-hc` hashtag channel exactly so normal mesh traffic doesn't see the flood of test pings. But `#nh-hc` still uses airtime. Guidelines:
 
 - **One health check per relocation** is reasonable.
 - **Rapid-fire repeated checks** (more than once a minute) add up. Your ping is a few hundred bytes; multiply by 30 gateways relaying and it's real airtime.
-- **War-driving?** Use `#nhhc` with single pings per stop, not continuous broadcasts.
+- **War-driving?** Use `#nh-hc` with single pings per stop, not continuous broadcasts.
 
 See **[Stewardship & Hashtag Channels](?section=meshcore-hashtag-channels)** for the full airtime etiquette.
 
@@ -93,7 +93,7 @@ See **[Stewardship & Hashtag Channels](?section=meshcore-hashtag-channels)** for
 
 ## How it works under the hood
 
-- Your test message is sent like any other `#nhhc` packet.
+- Your test message is sent like any other `#nh-hc` packet.
 - Our gateways (listed on **[Observers](/observers)**) forward everything they hear to our MQTT broker.
 - The collector records each packet with its gateway of origin, RSSI, and SNR.
 - The Health Check page queries our packet log for the specific payload you sent, and renders the results.
@@ -106,4 +106,4 @@ There is no magic. It's the same path every normal message takes — we're just 
 
 - **[Troubleshooting: Visibility](?section=troubleshooting-visibility)** — when Health Check shows no gateways
 - **[Coverage & Placement](?section=coverage-placement)** — when Health Check shows weak signal
-- **[Stewardship & Hashtag Channels](?section=meshcore-hashtag-channels)** — why we use `#nhhc`
+- **[Stewardship & Hashtag Channels](?section=meshcore-hashtag-channels)** — why we use `#nh-hc`

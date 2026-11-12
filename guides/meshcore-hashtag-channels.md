@@ -3,7 +3,7 @@ id: meshcore-hashtag-channels
 title: Stewardship & Hashtag Channels
 section: operating
 order: 1
-last_reviewed: 2026-04-21
+last_reviewed: 2026-11-12
 ---
 
 # Stewardship & Hashtag Channels
@@ -35,7 +35,7 @@ This isn't an abstract concern. On a busy afternoon we see the network approach 
 
 A hashtag channel is a named channel whose encryption key is derived from the channel name itself. Anyone who types `#nhmesh` joins the same channel. Traffic on the channel still floods across the mesh, but only nodes that have joined that specific channel will decode and relay it — the others see ciphertext they can't identify and drop it.
 
-This gives us a way to segment traffic by purpose without needing firmware-level regional routing (which is still in flux). Using the right hashtag for the right activity is the single biggest habit we ask of everyone.
+This gives us a way to segment traffic by purpose. MeshCore firmware also supports regions (scopes) that let repeaters allow or block floods by area, and NH repeaters use them; see **[MeshCore Repeaters & Regions in NH](?section=meshcore-repeaters-regions)**. The two work together. Using the right hashtag for the right activity is the single biggest habit we ask of everyone.
 
 ---
 
@@ -44,7 +44,7 @@ This gives us a way to segment traffic by purpose without needing firmware-level
 | Hashtag | Primary use | Flood level |
 |---|---|---|
 | **#nhmesh** | General chat: introductions, community talk, mesh shop talk | Normal |
-| **#nhhc** | Health checks and radio tests — use this instead of the Public channel for any "is my node working" pings | Normal |
+| **#nh-hc** | Health checks and radio tests — use this instead of the Public channel for any "is my node working" pings | Normal |
 | **#emergency** | Actual emergencies. Floods aggressively on purpose | Max |
 | **#nh-seacoast / #nh-monadnock / #nh-lakes** | Regional chatter when it doesn't need to reach the whole state | Normal |
 | **Public** | Only when you need absolute reach — onboarding new users, reaching someone in a region you don't have a channel for | Max |
@@ -55,8 +55,8 @@ This gives us a way to segment traffic by purpose without needing firmware-level
 
 | Situation | Right channel |
 |---|---|
-| Testing a new node | `#nhhc` — one ping, wait for the map, done |
-| War-driving in your car | `#nhhc` with occasional stops (not continuous broadcast) |
+| Testing a new node | `#nh-hc` — one ping, wait for the map, done |
+| War-driving in your car | `#nh-hc` with occasional stops (not continuous broadcast) |
 | Asking a setup question | `#nhmesh` |
 | Chatting with a neighbor two hops away | DM, or `#nhmesh` if it's community-relevant |
 | Coordinating a local event | `#nh-{your-region}` |
