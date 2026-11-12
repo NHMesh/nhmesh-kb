@@ -12,7 +12,7 @@ body:
     id: question
     attributes:
       label: What were you trying to find out
-      placeholder: How do I get my node to show up on the map after switching to MediumFast?
+      placeholder: How do I get my node to show up on the map?
     validations:
       required: true
   - type: textarea
