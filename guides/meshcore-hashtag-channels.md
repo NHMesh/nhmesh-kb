@@ -47,6 +47,7 @@ This gives us a way to segment traffic by purpose. MeshCore firmware also suppor
 | **#nh-hc** | Health checks and radio tests — use this instead of the Public channel for any "is my node working" pings | Normal |
 | **#emergency** | Actual emergencies. Floods aggressively on purpose | Max |
 | **#nh-seacoast / #nh-monadnock / #nh-lakes** | Regional chatter when it doesn't need to reach the whole state | Normal |
+| **#capitalmesh** | Regional chatter for the greater Concord NH area | Normal |
 | **Public** | Only when you need absolute reach — onboarding new users, reaching someone in a region you don't have a channel for | Max |
 
 ---
